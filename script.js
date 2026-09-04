@@ -449,7 +449,7 @@ function initQASimulator() {
           <div class="mt-4 p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 flex items-center justify-between">
             <span class="font-bold flex items-center gap-2">
               <i class="fa-solid fa-circle-check text-base"></i>
-              <span>✨ 6 passed (2.85s) — 100% Tests Passed!</span>
+              <span>6 passed (2.85s) — 100% Tests Passed!</span>
             </span>
             <span class="text-xs font-mono bg-emerald-500/20 px-2.5 py-1 rounded-md text-emerald-200">READY FOR PRODUCTION</span>
           </div>
@@ -499,13 +499,13 @@ function initTerminal() {
         const runBtn = document.getElementById('run-tests-btn');
         if (runBtn) runBtn.click();
       }
-      return '<span class="text-emerald-400">🚀 กำลังเปิดหน้าต่าง Playwright QA Automated Test Runner...</span>';
+      return '<span class="text-emerald-400"><i class="fa-solid fa-play mr-1.5 text-xs"></i>กำลังเปิดหน้าต่าง Playwright QA Automated Test Runner...</span>';
     },
     skills: () => `
       <div class="text-slate-200 font-mono text-xs space-y-1">
-        <div>🧪 <strong class="text-indigo-300">QA / Testing:</strong> Playwright (E2E & System), Test Cases, Bug Tracking</div>
-        <div>💻 <strong class="text-sky-300">Languages:</strong> Java (OOP), JavaScript, TypeScript, SQL (MySQL), HTML5, CSS3, PHP, C#</div>
-        <div>🛠️ <strong class="text-emerald-300">Stack:</strong> React, Tailwind CSS, Express.js, Prisma ORM, Laravel, Git, Figma</div>
+        <div><i class="fa-solid fa-flask-vial text-indigo-400 mr-1.5"></i><strong class="text-indigo-300">QA / Testing:</strong> Playwright (E2E & System), Test Cases, Bug Tracking</div>
+        <div><i class="fa-solid fa-code text-sky-400 mr-1.5"></i><strong class="text-sky-300">Languages:</strong> Java (OOP), JavaScript, TypeScript, SQL (MySQL), HTML5, CSS3, PHP, C#</div>
+        <div><i class="fa-solid fa-cubes text-emerald-400 mr-1.5"></i><strong class="text-emerald-300">Stack:</strong> React, Tailwind CSS, Express.js, Prisma ORM, Laravel, Git, Figma</div>
       </div>
     `,
     projects: () => `
@@ -518,15 +518,15 @@ function initTerminal() {
     `,
     contact: () => `
       <div class="text-slate-200 font-mono text-xs space-y-1">
-        <div>📧 <strong>Email:</strong> <a href="mailto:supasit.mee@gmail.com" class="text-indigo-300 underline">supasit.mee@gmail.com</a></div>
-        <div>📞 <strong>Phone:</strong> <a href="tel:+66837392007" class="text-emerald-300 underline">(+66) 83-739-2007</a></div>
-        <div>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/supasit-meedecha" target="_blank" class="text-sky-300 underline">supasit-meedecha</a></div>
-        <div>🐙 <strong>GitHub:</strong> <a href="https://github.com/EzekielMorales" target="_blank" class="text-purple-300 underline">EzekielMorales</a></div>
+        <div><i class="fa-solid fa-envelope text-indigo-400 mr-1.5"></i><strong>Email:</strong> <a href="mailto:supasit.mee@gmail.com" class="text-indigo-300 underline">supasit.mee@gmail.com</a></div>
+        <div><i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i><strong>Phone:</strong> <a href="tel:+66837392007" class="text-emerald-300 underline">(+66) 83-739-2007</a></div>
+        <div><i class="fa-brands fa-linkedin text-sky-400 mr-1.5"></i><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/supasit-meedecha" target="_blank" class="text-sky-300 underline">supasit-meedecha</a></div>
+        <div><i class="fa-brands fa-github text-purple-400 mr-1.5"></i><strong>GitHub:</strong> <a href="https://github.com/EzekielMorales" target="_blank" class="text-purple-300 underline">EzekielMorales</a></div>
       </div>
     `,
     cv: () => {
       window.open('assets/Supasit_CV.pdf', '_blank');
-      return '<span class="text-indigo-400">📄 เปิดไฟล์เรซูเม่ Supasit_CV.pdf บนแท็บใหม่แล้ว</span>';
+      return '<span class="text-indigo-400"><i class="fa-solid fa-file-pdf mr-1.5"></i>เปิดไฟล์เรซูเม่ Supasit_CV.pdf บนแท็บใหม่แล้ว</span>';
     },
     about: () => `
       <div class="text-slate-300 text-xs leading-relaxed font-thai">
@@ -538,7 +538,7 @@ function initTerminal() {
       terminalOutput.innerHTML = '';
       return '';
     },
-    sudo: () => '<span class="text-rose-400">Permission denied: You already have full guest access to explore this portfolio! 😊</span>'
+    sudo: () => '<span class="text-rose-400"><i class="fa-solid fa-shield-halved mr-1.5"></i>Permission denied: You already have full guest access to explore this portfolio!</span>'
   };
 
   function executeCommand(rawCmd) {
