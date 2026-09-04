@@ -332,7 +332,7 @@ function playAudioTone(type) {
       osc.start(now);
       osc.stop(now + 0.25);
     } else if (type === 'success') {
-      // 3-note victory chord
+      // 4-note victory chord
       [523.25, 659.25, 783.99, 1046.5].forEach((freq, idx) => {
         const chordOsc = audioCtx.createOscillator();
         const chordGain = audioCtx.createGain();
@@ -372,7 +372,7 @@ function initQASimulator() {
       soundToggleBtn.innerHTML = soundMuted 
         ? '<i class="fa-solid fa-volume-xmark"></i>' 
         : '<i class="fa-solid fa-volume-high"></i>';
-      showToast(soundMuted ? 'ปิดเสียงเรียบร้อย' : 'เปิดเสียงจำลองแล้ว');
+      showToast(soundMuted ? 'Sound muted' : 'Sound effects enabled');
     });
   }
 
@@ -419,7 +419,7 @@ function initQASimulator() {
     terminalBody.innerHTML = '';
     progressFill.style.width = '0%';
     runBtn.disabled = true;
-    runBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>กำลังรัน Test...</span>';
+    runBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Running Tests...</span>';
 
     // Initial command banner
     appendLog('<span class="text-indigo-400 font-bold">$ npx playwright test --project=all</span>');
@@ -456,7 +456,7 @@ function initQASimulator() {
         `);
         playAudioTone('success');
         runBtn.disabled = false;
-        runBtn.innerHTML = '<i class="fa-solid fa-rotate-right"></i><span>รันการทดสอบใหม่อีกครั้ง</span>';
+        runBtn.innerHTML = '<i class="fa-solid fa-rotate-right"></i><span>Re-run Test Suite</span>';
       }
       terminalBody.scrollTop = terminalBody.scrollHeight;
     }, 450);
@@ -481,14 +481,14 @@ function initTerminal() {
 
   const commands = {
     help: () => `
-      <div class="text-slate-300 space-y-1">
-        <div><strong class="text-indigo-400">help</strong>      - แสดงคำสั่งทั้งหมดที่มี</div>
-        <div><strong class="text-emerald-400">test</strong>      - รันระบบจำลอง Playwright QA Automated Tests</div>
-        <div><strong class="text-sky-400">skills</strong>    - แสดงรายการเทคโนโลยีและทักษะเฉพาะทาง</div>
-        <div><strong class="text-amber-400">projects</strong>  - รายการโปรเจกต์เด่น (NECTEC, ClickNext, Unity, Java)</div>
-        <div><strong class="text-rose-400">contact</strong>   - ข้อมูลช่องทางติดต่อ (Email, Phone, LinkedIn)</div>
-        <div><strong class="text-purple-400">cv</strong>        - เปิดไฟล์เรซูเม่ Supasit_CV.pdf</div>
-        <div><strong class="text-slate-400">clear</strong>     - ล้างหน้าจอ Terminal</div>
+      <div class="text-slate-300 space-y-1 font-mono text-xs">
+        <div><strong class="text-indigo-400">help</strong>      - display all available commands</div>
+        <div><strong class="text-emerald-400">test</strong>      - run Playwright QA automated test suite simulation</div>
+        <div><strong class="text-sky-400">skills</strong>    - list specialized technologies and frameworks</div>
+        <div><strong class="text-amber-400">projects</strong>  - list featured projects (NECTEC, ClickNext, Unity, Java)</div>
+        <div><strong class="text-rose-400">contact</strong>   - get direct contact information (Email, Phone, LinkedIn)</div>
+        <div><strong class="text-purple-400">cv</strong>        - open Supasit_CV.pdf resume in a new tab</div>
+        <div><strong class="text-slate-400">clear</strong>     - clear terminal console screen</div>
       </div>
     `,
     test: () => {
@@ -499,19 +499,19 @@ function initTerminal() {
         const runBtn = document.getElementById('run-tests-btn');
         if (runBtn) runBtn.click();
       }
-      return '<span class="text-emerald-400"><i class="fa-solid fa-play mr-1.5 text-xs"></i>กำลังเปิดหน้าต่าง Playwright QA Automated Test Runner...</span>';
+      return '<span class="text-emerald-400"><i class="fa-solid fa-play mr-1.5 text-xs"></i>Launching Playwright QA Test Runner...</span>';
     },
     skills: () => `
       <div class="text-slate-200 font-mono text-xs space-y-1">
-        <div><i class="fa-solid fa-flask-vial text-indigo-400 mr-1.5"></i><strong class="text-indigo-300">QA / Testing:</strong> Playwright (E2E & System), Test Cases, Bug Tracking</div>
+        <div><i class="fa-solid fa-flask-vial text-indigo-400 mr-1.5"></i><strong class="text-indigo-300">QA / Testing:</strong> Playwright (E2E & System), Test Cases, Bug Tracking, Insomnia</div>
         <div><i class="fa-solid fa-code text-sky-400 mr-1.5"></i><strong class="text-sky-300">Languages:</strong> Java (OOP), JavaScript, TypeScript, SQL (MySQL), HTML5, CSS3, PHP, C#</div>
-        <div><i class="fa-solid fa-cubes text-emerald-400 mr-1.5"></i><strong class="text-emerald-300">Stack:</strong> React, Tailwind CSS, Express.js, Prisma ORM, Laravel, Git, Figma</div>
+        <div><i class="fa-solid fa-cubes text-emerald-400 mr-1.5"></i><strong class="text-emerald-300">Stack:</strong> React, Tailwind CSS, Express.js, Prisma ORM, Laravel, Git, Figma, Unity</div>
       </div>
     `,
     projects: () => `
       <div class="text-slate-200 font-mono text-xs space-y-1.5">
-        <div>1. <strong class="text-indigo-300">Cultura (NECTEC):</strong> Tourism Resource Management (React, Express, Prisma, Playwright)</div>
-        <div>2. <strong class="text-sky-300">Work Request (ClickNext):</strong> Internal Task Tracking (PHP Laravel, MySQL)</div>
+        <div>1. <strong class="text-indigo-300">Cultura (NECTEC):</strong> Community Tourism Management (React, Express, Prisma, Playwright)</div>
+        <div>2. <strong class="text-sky-300">Work Request (ClickNext):</strong> Internal Task Assignment System (PHP Laravel, MySQL)</div>
         <div>3. <strong class="text-emerald-300">Scary Escape:</strong> 3D Survival Horror Game (Unity, C#)</div>
         <div>4. <strong class="text-amber-300">Quiz Blast:</strong> Desktop Interactive Quiz (Java OOP)</div>
       </div>
@@ -526,12 +526,12 @@ function initTerminal() {
     `,
     cv: () => {
       window.open('assets/Supasit_CV.pdf', '_blank');
-      return '<span class="text-indigo-400"><i class="fa-solid fa-file-pdf mr-1.5"></i>เปิดไฟล์เรซูเม่ Supasit_CV.pdf บนแท็บใหม่แล้ว</span>';
+      return '<span class="text-indigo-400"><i class="fa-solid fa-file-pdf mr-1.5"></i>Opened Supasit_CV.pdf in a new tab.</span>';
     },
     about: () => `
-      <div class="text-slate-300 text-xs leading-relaxed font-thai">
-        สวัสดีครับ! ผม สุภษิต มีเดชา (Supasit Meedecha) นิสิตวิศวกรรมซอฟต์แวร์ ม.บูรพา GPA 3.61<br/>
-        กำลังมองหาที่ฝึกงานสาย Software QA / BA / Full-Stack พร้อมลุยงานเต็มที่ครับ!
+      <div class="text-slate-300 text-xs leading-relaxed font-mono">
+        Hi! I'm Supasit Meedecha, a 3rd-year Software Engineering student at Burapha University (GPA 3.61).<br/>
+        Passionate about Software QA, Business Analysis, and Full-Stack Engineering. Actively seeking an internship opportunity!
       </div>
     `,
     clear: () => {
@@ -561,7 +561,7 @@ function initTerminal() {
       if (cmd === 'clear') return;
       resDiv.innerHTML = output;
     } else {
-      resDiv.innerHTML = `<span class="text-rose-400">command not found: "${escapeHtml(rawCmd)}". พิมพ์ <strong class="text-indigo-300 cursor-pointer underline" onclick="runChip('help')">help</strong> เพื่อดูคำสั่งทั้งหมด</span>`;
+      resDiv.innerHTML = `<span class="text-rose-400">command not found: "${escapeHtml(rawCmd)}". Type <strong class="text-indigo-300 cursor-pointer underline" onclick="runChip('help')">help</strong> to view available commands.</span>`;
     }
 
     terminalOutput.appendChild(resDiv);
@@ -596,18 +596,18 @@ function escapeHtml(str) {
 function copyToClipboard(text, buttonElement) {
   playAudioTone('click');
   navigator.clipboard.writeText(text).then(() => {
-    showToast(`คัดลอก "${text}" เรียบร้อยแล้ว!`);
+    showToast(`Copied "${text}" to clipboard!`);
     
     if (buttonElement) {
       const originalHtml = buttonElement.innerHTML;
-      buttonElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400"></i><span>คัดลอกสำเร็จ!</span>';
+      buttonElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400"></i><span>Copied!</span>';
       setTimeout(() => {
         buttonElement.innerHTML = originalHtml;
       }, 2000);
     }
   }).catch(err => {
     console.error('Could not copy text: ', err);
-    showToast('เกิดข้อผิดพลาดในการคัดลอก');
+    showToast('Failed to copy text');
   });
 }
 

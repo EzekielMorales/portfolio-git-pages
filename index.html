@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +9,10 @@
   <!-- Favicon (SVG Terminal Code Icon) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%236366f1%22 stroke-width=%222.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polyline points=%224 17 10 11 4 5%22></polyline><line x1=%2212%22 y1=%2219%22 x2=%2220%22 y2=%2219%22></line></svg>">
 
-  <!-- Google Fonts: JetBrains Mono + Prompt (Thai) -->
+  <!-- Google Fonts: JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -25,9 +25,8 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"JetBrains Mono"', 'Prompt', 'monospace'],
+            sans: ['"JetBrains Mono"', 'monospace', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
-            thai: ['Prompt', '"JetBrains Mono"', 'sans-serif'],
           },
           colors: {
             brand: {
@@ -74,38 +73,38 @@
       
       <!-- Logo / Brand -->
       <a href="#" class="flex items-center gap-2.5 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-sky-500 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-sky-500 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform font-mono">
           SM
         </div>
         <div>
-          <span class="font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors">Supasit M.</span>
-          <span class="block text-[10px] text-slate-400 -mt-1 font-mono">interactive.dev</span>
+          <span class="font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors font-mono">Supasit M.</span>
+          <span class="block text-[10px] text-slate-400 -mt-1 font-mono">portfolio.dev</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-1">
-        <a href="#about" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">เกี่ยวกับเรา</a>
-        <a href="#skills" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">ทักษะ</a>
-        <a href="#projects" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">ผลงาน & ประสบการณ์</a>
-        <a href="#terminal-section" class="px-3 py-1.5 rounded-lg text-sm text-indigo-400 hover:text-indigo-300 hover:bg-indigo-950/40 transition-colors flex items-center gap-1.5">
+        <a href="#about" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-mono">About</a>
+        <a href="#skills" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-mono">Skills</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-mono">Projects</a>
+        <a href="#terminal-section" class="px-3 py-1.5 rounded-lg text-sm text-indigo-400 hover:text-indigo-300 hover:bg-indigo-950/40 transition-colors flex items-center gap-1.5 font-mono">
           <i class="fa-solid fa-terminal text-xs"></i>
           <span>CLI Terminal</span>
         </a>
-        <a href="#education" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">การศึกษา</a>
-        <a href="#contact" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">ติดต่อ</a>
+        <a href="#education" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-mono">Education</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-mono">Contact</a>
       </nav>
 
       <!-- Right Actions: Live Test Runner & Resume -->
       <div class="flex items-center gap-2.5">
-        <button class="open-qa-sim-btn hidden sm:inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm transition-all hover:scale-105">
+        <button class="open-qa-sim-btn hidden sm:inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm transition-all hover:scale-105 font-mono">
           <i class="fa-solid fa-play text-[10px] text-emerald-400"></i>
-          <span>จำลองรัน QA Test</span>
+          <span>Run QA Demo</span>
         </button>
 
-        <a href="assets/Supasit_CV.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/20 transition-all hover:scale-105">
+        <a href="assets/Supasit_CV.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/20 transition-all hover:scale-105 font-mono">
           <i class="fa-solid fa-file-pdf"></i>
-          <span class="hidden sm:inline">ดู Resume</span>
+          <span class="hidden sm:inline">Resume (PDF)</span>
         </a>
 
         <!-- Mobile Menu Button -->
@@ -116,19 +115,19 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 px-4 pt-2 pb-4 space-y-1">
-      <a href="#about" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">เกี่ยวกับเรา</a>
-      <a href="#skills" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">ทักษะ</a>
-      <a href="#projects" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">ผลงาน & ประสบการณ์</a>
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 px-4 pt-2 pb-4 space-y-1 font-mono">
+      <a href="#about" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">About</a>
+      <a href="#skills" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">Skills</a>
+      <a href="#projects" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">Projects</a>
       <a href="#terminal-section" class="block px-3 py-2 rounded-md text-base text-indigo-400 hover:bg-indigo-950/40 mobile-link">CLI Terminal</a>
-      <a href="#education" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">การศึกษา</a>
-      <a href="#contact" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">ติดต่อ</a>
+      <a href="#education" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">Education</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md text-base text-slate-300 hover:bg-slate-800 hover:text-white mobile-link">Contact</a>
       <button class="open-qa-sim-btn w-full mt-2 py-2 rounded-lg bg-emerald-600/20 text-emerald-300 border border-emerald-500/40 text-sm font-semibold flex items-center justify-center gap-2">
         <i class="fa-solid fa-play text-xs"></i>
-        <span>จำลองรัน Playwright QA Test</span>
+        <span>Run Playwright QA Test Demo</span>
       </button>
       <a href="assets/Supasit_CV.pdf" target="_blank" class="block mt-2 text-center px-4 py-2 rounded-lg bg-indigo-600 text-white font-medium">
-        <i class="fa-solid fa-file-pdf mr-1"></i> ดาวน์โหลด Resume (PDF)
+        <i class="fa-solid fa-file-pdf mr-1"></i> Download Resume (PDF)
       </a>
     </div>
   </header>
@@ -142,54 +141,54 @@
         <!-- Left Column: Intro -->
         <div class="lg:col-span-8 space-y-6 text-left">
           <!-- Status Badge -->
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-medium">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-medium font-mono">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-badge"></span>
-            <span>พร้อมรับโอกาสฝึกงาน (Internship Ready)</span>
+            <span>Available for Internship (Ready to Start)</span>
           </div>
 
           <!-- Name & Headline -->
           <div class="space-y-3">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              สวัสดีครับ, ผม <br/>
+              Hi, I'm <br/>
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400">
-                สุภษิต มีเดชา
+                Supasit Meedecha
               </span>
             </h1>
             <p class="text-lg sm:text-xl text-slate-300 font-medium font-mono">
-              Supasit Meedecha <span class="text-slate-500 font-normal">| 3rd-year Software Engineering Student</span>
+              Software Engineering Student <span class="text-slate-500 font-normal">@ Burapha University</span>
             </p>
           </div>
 
           <!-- Bio / Elevator Pitch -->
-          <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl font-thai">
-            นิสิตวิศวกรรมซอฟต์แวร์ ชั้นปีที่ 3 คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา หลงใหลในด้าน 
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl font-mono">
+            Third-year Software Engineering student passionate about 
             <strong class="text-indigo-300 font-semibold">Software Testing (QA)</strong>, 
-            <strong class="text-sky-300 font-semibold">Business Analysis (BA)</strong> 
-            และ <strong class="text-emerald-300 font-semibold">Full-Stack Development</strong> 
-            พร้อมนำความรู้ด้านการออกแบบสถาปัตยกรรมระบบ การพัฒนาเว็บ และ Automated Testing (Playwright) มาร่วมสร้างซอฟต์แวร์คุณภาพสูงครับ
+            <strong class="text-sky-300 font-semibold">Business Analysis (BA)</strong>, and 
+            <strong class="text-emerald-300 font-semibold">Full-Stack Development</strong>. 
+            Eager to apply software design, automated testing (Playwright), and web engineering to deliver resilient, high-quality digital solutions.
           </p>
 
           <!-- Interactive Action Buttons -->
           <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-lg shadow-indigo-600/25 flex items-center gap-2 hover:-translate-y-0.5 transition-all">
-              <span>ดูผลงานโปรเจกต์</span>
-              <i class="fa-solid fa-arrow-down text-sm"></i>
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-lg shadow-indigo-600/25 flex items-center gap-2 hover:-translate-y-0.5 transition-all font-mono text-sm">
+              <span>Explore Projects</span>
+              <i class="fa-solid fa-arrow-down text-xs"></i>
             </a>
-            <button class="open-qa-sim-btn px-5 py-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 font-medium flex items-center gap-2 hover:-translate-y-0.5 transition-all shadow-md">
+            <button class="open-qa-sim-btn px-5 py-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 font-medium flex items-center gap-2 hover:-translate-y-0.5 transition-all shadow-md font-mono text-sm">
               <i class="fa-solid fa-play text-xs text-emerald-400"></i>
-              <span>ลองรัน QA Simulator</span>
+              <span>Run QA Simulator</span>
             </button>
-            <a href="assets/Supasit_CV.pdf" target="_blank" class="px-5 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium flex items-center gap-2 hover:-translate-y-0.5 transition-all">
-              <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-              <span>เปิด CV / Resume</span>
+            <a href="assets/Supasit_CV.pdf" target="_blank" class="px-5 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium flex items-center gap-2 hover:-translate-y-0.5 transition-all font-mono text-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              <span>View Resume (PDF)</span>
             </a>
           </div>
 
-          <!-- Social Links & Contact Badges -->
-          <div class="pt-4 flex flex-wrap items-center gap-3 text-slate-400 text-xs sm:text-sm">
+          <!-- Social Links & Location -->
+          <div class="pt-4 flex flex-wrap items-center gap-3 text-slate-400 text-xs sm:text-sm font-mono">
             <a href="https://github.com/EzekielMorales" target="_blank" rel="noreferrer" class="flex items-center gap-2 hover:text-white transition-colors bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 hover:border-slate-700">
               <i class="fa-brands fa-github text-base text-slate-300"></i>
-              <span class="font-mono">GitHub: EzekielMorales</span>
+              <span>GitHub: EzekielMorales</span>
             </a>
             <a href="https://linkedin.com/in/supasit-meedecha" target="_blank" rel="noreferrer" class="flex items-center gap-2 hover:text-white transition-colors bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 hover:border-slate-700">
               <i class="fa-brands fa-linkedin text-base text-sky-400"></i>
@@ -197,7 +196,7 @@
             </a>
             <div class="flex items-center gap-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800">
               <i class="fa-solid fa-location-dot text-rose-400"></i>
-              <span>ชลบุรี, ไทย</span>
+              <span>Chon Buri, Thailand</span>
             </div>
           </div>
         </div>
@@ -208,14 +207,14 @@
             
             <div class="flex items-center gap-4 border-b border-slate-800 pb-5">
               <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 via-sky-600 to-emerald-500 p-0.5 shadow-inner">
-                <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-200 to-sky-200">
+                <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-200 to-sky-200 font-mono">
                   SM
                 </div>
               </div>
               <div>
-                <h3 class="font-bold text-slate-100 text-lg">Supasit Meedecha</h3>
+                <h3 class="font-bold text-slate-100 text-lg font-mono">Supasit Meedecha</h3>
                 <p class="text-xs text-indigo-400 font-mono">SE @ Burapha Univ.</p>
-                <p class="text-xs text-slate-400 mt-0.5">GPA: <strong class="text-emerald-400 font-mono">3.61</strong></p>
+                <p class="text-xs text-slate-400 mt-0.5 font-mono">Accumulated GPA: <strong class="text-emerald-400">3.61</strong></p>
               </div>
             </div>
 
@@ -226,8 +225,8 @@
                   <i class="fa-solid fa-vial"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-slate-200">Software Testing (QA)</h4>
-                  <p class="text-xs text-slate-400 font-thai">Playwright E2E & System Testing, Test Cases, Bug Reporting</p>
+                  <h4 class="font-semibold text-slate-200 font-mono text-xs">Software Testing (QA)</h4>
+                  <p class="text-xs text-slate-400 font-mono">Automated E2E Testing with Playwright, Test Cases & Bug Reporting</p>
                 </div>
               </div>
 
@@ -236,8 +235,8 @@
                   <i class="fa-solid fa-code"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-slate-200">Full-Stack Development</h4>
-                  <p class="text-xs text-slate-400 font-thai">React, Tailwind CSS, TypeScript, Express.js, Prisma, Laravel (PHP)</p>
+                  <h4 class="font-semibold text-slate-200 font-mono text-xs">Full-Stack Development</h4>
+                  <p class="text-xs text-slate-400 font-mono">React, TypeScript, Tailwind CSS, Express.js, Prisma ORM, Laravel PHP</p>
                 </div>
               </div>
 
@@ -246,21 +245,21 @@
                   <i class="fa-solid fa-handshake"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-slate-200">Industry Collaboration</h4>
-                  <p class="text-xs text-slate-400 font-thai">ร่วมพัฒนาโปรเจกต์จริงกับ NECTEC และ ClickNext Bangkok</p>
+                  <h4 class="font-semibold text-slate-200 font-mono text-xs">Industry Collaboration</h4>
+                  <p class="text-xs text-slate-400 font-mono">Real-world projects in collaboration with NECTEC and ClickNext</p>
                 </div>
               </div>
             </div>
 
-            <!-- Quick Action Interactive Snippet -->
-            <div class="border-t border-slate-800 pt-4 text-xs space-y-2 text-slate-400">
+            <!-- Quick Action Snippet -->
+            <div class="border-t border-slate-800 pt-4 text-xs space-y-2 text-slate-400 font-mono">
               <div class="flex items-center justify-between">
                 <span class="text-slate-500">Email:</span>
-                <a href="mailto:supasit.mee@gmail.com" class="text-indigo-300 hover:underline font-mono">supasit.mee@gmail.com</a>
+                <a href="mailto:supasit.mee@gmail.com" class="text-indigo-300 hover:underline">supasit.mee@gmail.com</a>
               </div>
               <div class="flex items-center justify-between">
-                <span class="text-slate-500">Tel:</span>
-                <a href="tel:+66837392007" class="text-emerald-300 hover:underline font-mono">(+66) 83-739-2007</a>
+                <span class="text-slate-500">Phone:</span>
+                <a href="tel:+66837392007" class="text-emerald-300 hover:underline">(+66) 83-739-2007</a>
               </div>
             </div>
 
@@ -270,23 +269,23 @@
       </div>
     </section>
 
-    <!-- STATS COUNTER BAR (Interactive Cards) -->
+    <!-- STATS COUNTER BAR -->
     <section class="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
-      <div class="interactive-card p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-mono">3.61</div>
-        <div class="text-xs sm:text-sm text-slate-400 mt-1 font-thai">GPA ม.บูรพา</div>
+      <div class="interactive-card p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center font-mono">
+        <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400">3.61</div>
+        <div class="text-xs sm:text-sm text-slate-400 mt-1">Burapha Univ. GPA</div>
       </div>
-      <div class="interactive-card p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-sky-400 font-mono">2</div>
-        <div class="text-xs sm:text-sm text-slate-400 mt-1 font-thai">ร่วมงาน NECTEC & ClickNext</div>
+      <div class="interactive-card p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center font-mono">
+        <div class="text-2xl sm:text-3xl font-extrabold text-sky-400">2</div>
+        <div class="text-xs sm:text-sm text-slate-400 mt-1">Industry Collaborations</div>
       </div>
-      <div class="interactive-card p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">4+</div>
-        <div class="text-xs sm:text-sm text-slate-400 mt-1 font-thai">โปรเจกต์จริง & วิจัย</div>
+      <div class="interactive-card p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center font-mono">
+        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">4+</div>
+        <div class="text-xs sm:text-sm text-slate-400 mt-1">Key Projects Built</div>
       </div>
-      <div class="interactive-card p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">100%</div>
-        <div class="text-xs sm:text-sm text-slate-400 mt-1 font-thai">ความพร้อมเริ่มฝึกงาน</div>
+      <div class="interactive-card p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center font-mono">
+        <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</div>
+        <div class="text-xs sm:text-sm text-slate-400 mt-1">Internship Readiness</div>
       </div>
     </section>
 
@@ -298,19 +297,19 @@
           <span>ABOUT ME</span>
         </div>
         <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          เป้าหมายและเส้นทางสายวิศวกรรมซอฟต์แวร์
+          Core Pillars & Career Focus
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono">
         <!-- Card 1: Software QA & Testing -->
         <div class="interactive-card p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition-all group">
           <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-bug-slash"></i>
           </div>
           <h3 class="text-lg font-bold text-white mb-2">Software Testing (QA)</h3>
-          <p class="text-sm text-slate-400 leading-relaxed font-thai">
-            มีความเชี่ยวชาญทั้ง <strong>Manual Testing</strong> และ <strong>Automated Testing (Playwright)</strong> การออกแบบ Test Cases, Scenario, ตลอดจนการทำ Bug Reporting เพื่อการันตีคุณภาพและความน่าเชื่อถือของซอฟต์แวร์
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Proficient in both <strong>Manual Testing</strong> and <strong>Automated E2E Testing (Playwright)</strong>. Experienced in designing comprehensive test cases, execution scenarios, and structured bug reporting to guarantee software reliability.
           </p>
         </div>
 
@@ -320,8 +319,8 @@
             <i class="fa-solid fa-chart-line"></i>
           </div>
           <h3 class="text-lg font-bold text-white mb-2">Business Analysis (BA)</h3>
-          <p class="text-sm text-slate-400 leading-relaxed font-thai">
-            เข้าใจกระบวนการ <strong>SDLC</strong> และแนวทางการทำงานแบบ <strong>Agile</strong> สามารถวิเคราะห์ความต้องการของผู้ใช้ (User Requirements) แปลงเป็น Technical Specifications และออกแบบ UI/UX ด้วย Figma
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Strong understanding of the <strong>SDLC</strong> and <strong>Agile Scrum</strong> methodologies. Skilled in gathering user requirements, translating them into technical specifications, and wireframing intuitive UI/UX with Figma.
           </p>
         </div>
 
@@ -331,8 +330,8 @@
             <i class="fa-solid fa-layer-group"></i>
           </div>
           <h3 class="text-lg font-bold text-white mb-2">Full-Stack Capability</h3>
-          <p class="text-sm text-slate-400 leading-relaxed font-thai">
-            พัฒนาได้ทั้งหน้าบ้าน (React, Tailwind CSS) และหลังบ้าน (Express.js, TypeScript, Prisma, PHP Laravel) พร้อมต่อยอดการนำ Artificial Intelligence (AI) มาปรับใช้จริงในองค์กร
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Experienced across frontend (React, TypeScript, Tailwind CSS) and backend architectures (Node/Express, Prisma ORM, Laravel PHP). Eager to explore practical Artificial Intelligence (AI) integration in production systems.
           </p>
         </div>
       </div>
@@ -346,11 +345,11 @@
           <span>SKILLS MATRIX</span>
         </div>
         <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Technical & Professional Skills
+          Technical & Professional Competencies
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono">
 
         <!-- Testing & QA Skills (Highlight) -->
         <div class="interactive-card p-6 rounded-2xl bg-gradient-to-br from-indigo-950/40 via-slate-900/80 to-slate-950 border border-indigo-500/30 space-y-4">
@@ -361,26 +360,26 @@
               </div>
               <h3 class="text-lg font-bold text-white">Software Testing (Proficient)</h3>
             </div>
-            <button class="open-qa-sim-btn text-xs text-indigo-400 hover:text-indigo-300 font-mono flex items-center gap-1 underline">
-              <span>Run Test</span>
+            <button class="open-qa-sim-btn text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1 underline">
+              <span>Run Demo</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
-          <p class="text-xs text-slate-400 font-thai">
-            เน้นความละเอียดรอบคอบในการตรวจจับข้อผิดพลาด และการสร้าง Automated Scripts เพื่อการทดสอบที่มีประสิทธิภาพ
+          <p class="text-xs text-slate-400">
+            Meticulous in test design, automated scenario scripting, and ensuring zero-defect software quality before production release.
           </p>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-3 py-1.5 rounded-lg bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 text-xs font-semibold flex items-center gap-1.5 font-mono">
+            <span class="px-3 py-1.5 rounded-lg bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 text-xs font-semibold flex items-center gap-1.5">
               <i class="fa-solid fa-robot"></i> Playwright (E2E & System Testing)
             </span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 text-xs font-medium border border-slate-700">
               Manual Testing
             </span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 text-xs font-medium border border-slate-700">
-              Writing Test Cases & Scenarios
+              Test Cases & Execution Scenarios
             </span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 text-xs font-medium border border-slate-700">
-              Bug Reporting & Tracking
+              Bug Reporting & Traceability
             </span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 text-xs font-medium border border-slate-700">
               API Testing (Insomnia)
@@ -398,21 +397,21 @@
           </div>
           <div class="space-y-3 pt-1">
             <div>
-              <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider block mb-2 font-mono">Proficient (เชี่ยวชาญ)</span>
+              <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider block mb-2">Proficient</span>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Java (OOP)</span>
-                <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">JavaScript</span>
-                <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">HTML5</span>
-                <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">SQL (MySQL)</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-200 text-xs border border-slate-700">Java (OOP Concepts)</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-200 text-xs border border-slate-700">JavaScript</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-200 text-xs border border-slate-700">HTML5</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-200 text-xs border border-slate-700">SQL (MySQL)</span>
               </div>
             </div>
             <div class="pt-1">
-              <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider block mb-2 font-mono">Intermediate (ปานกลาง)</span>
+              <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider block mb-2">Intermediate</span>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 text-xs font-mono border border-slate-700/60">TypeScript</span>
-                <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 text-xs font-mono border border-slate-700/60">CSS3</span>
-                <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 text-xs font-mono border border-slate-700/60">PHP</span>
-                <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 text-xs font-mono border border-slate-700/60">C#</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 text-xs border border-slate-700/60">TypeScript</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 text-xs border border-slate-700/60">CSS3</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 text-xs border border-slate-700/60">PHP</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 text-xs border border-slate-700/60">C#</span>
               </div>
             </div>
           </div>
@@ -462,22 +461,22 @@
             </div>
             <h3 class="text-lg font-bold text-white">Soft Skills & Methodologies</h3>
           </div>
-          <div class="space-y-2 text-xs text-slate-300 font-thai">
+          <div class="space-y-2 text-xs text-slate-300">
             <div class="flex items-start gap-2">
               <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
-              <span><strong>Communication & Collaboration:</strong> ทำงานร่วมกับ Cross-functional teams และสื่อสาร Technical Issues ให้ผู้เกี่ยวข้องเข้าใจได้ชัดเจน</span>
+              <span><strong>Communication & Collaboration:</strong> Experienced in collaborating within cross-functional teams and explaining technical issues clearly to developers and stakeholders.</span>
             </div>
             <div class="flex items-start gap-2">
               <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
-              <span><strong>Critical Thinking & Problem Solving:</strong> วิเคราะห์หาสาเหตุของ Bug อย่างเป็นระบบเพื่อแก้ไขปัญหาได้อย่างตรงจุด</span>
+              <span><strong>Critical Thinking & Root Cause Analysis:</strong> Strong analytical skills utilized for identifying software bugs, diagnosing root causes, and implementing clean solutions.</span>
             </div>
             <div class="flex items-start gap-2">
               <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
-              <span><strong>Attention to Detail:</strong> รอบคอบในการรัน Test Cases และยืนยันคุณภาพก่อนส่งมอบงาน</span>
+              <span><strong>Attention to Detail:</strong> Meticulous in executing test cases and verifying system behaviors to ensure reliability and optimal UX.</span>
             </div>
             <div class="flex items-start gap-2">
               <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
-              <span><strong>Agile & SDLC:</strong> เข้าใจกระบวนการพัฒนาซอฟต์แวร์แบบ Agile และการปรับตัวเรียนรู้เทคโนโลยีใหม่อยู่เสมอ</span>
+              <span><strong>Growth Mindset & Adaptability:</strong> Eager to learn modern frameworks, tooling, and adapt rapidly to dynamic project requirements.</span>
             </div>
           </div>
         </div>
@@ -485,7 +484,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS & EXPERIENCE SECTION (Interactive with Filters) -->
+    <!-- PROJECTS & EXPERIENCE SECTION -->
     <section id="projects" class="scroll-mt-24 space-y-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -512,7 +511,7 @@
 
         <!-- Project 1: NECTEC Collaboration (Featured with Interactive Live Test Button) -->
         <article data-category="qa fullstack" class="project-item interactive-card relative p-6 sm:p-8 rounded-3xl bg-slate-900/70 border border-slate-800 hover:border-indigo-500/50 transition-all group">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3 font-mono">
             <div class="flex items-center gap-2">
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 flex items-center gap-1.5">
                 <i class="fa-solid fa-star text-amber-400 text-[11px]"></i>
@@ -522,12 +521,12 @@
                 Collaborated with NECTEC
               </span>
             </div>
-            <span class="text-xs font-mono text-slate-400">Jul 2025 – Present</span>
+            <span class="text-xs text-slate-400">Jul 2025 – Present</span>
           </div>
 
           <div class="space-y-3">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors font-mono">
                 Tourism Community Management System (Cultura)
               </h3>
               <!-- Interactive Live Test Trigger Button -->
@@ -537,26 +536,26 @@
               </button>
             </div>
 
-            <p class="text-slate-300 text-sm leading-relaxed font-thai">
-              เว็บแอปพลิเคชันแบบ Full-Stack เพื่อการบริหารจัดการทรัพยากรการท่องเที่ยวโดยชุมชนอย่างเป็นระบบ มีการออกแบบสถาปัตยกรรมทั้งหน้าบ้าน หลังบ้าน และการทำระบบทดสอบอัตโนมัติ
+            <p class="text-slate-300 text-sm leading-relaxed font-mono">
+              A full-stack web application designed for managing community-based tourism resources with automated system verification and modern architecture.
             </p>
 
-            <div class="space-y-2 pt-2 text-sm text-slate-300 font-thai">
+            <div class="space-y-2 pt-2 text-xs sm:text-sm text-slate-300 font-mono">
               <div class="flex items-start gap-2.5">
-                <span class="text-indigo-400 mt-1 font-mono text-xs">▸</span>
-                <span><strong>Frontend:</strong> พัฒนา Responsive Web UI ด้วย React, Tailwind CSS และ TypeScript ให้ผู้ใช้งานเข้าถึงได้อย่างสะดวกรวดเร็ว</span>
+                <span class="text-indigo-400 mt-1 text-xs">▸</span>
+                <span><strong>Frontend:</strong> Built responsive, component-based user interfaces using React, Tailwind CSS, and TypeScript.</span>
               </div>
               <div class="flex items-start gap-2.5">
-                <span class="text-indigo-400 mt-1 font-mono text-xs">▸</span>
-                <span><strong>Backend:</strong> ออกแบบและสร้าง RESTful APIs ด้วย Express.js + TypeScript เชื่อมต่อฐานข้อมูล MySQL ผ่าน Prisma ORM</span>
+                <span class="text-indigo-400 mt-1 text-xs">▸</span>
+                <span><strong>Backend:</strong> Developed RESTful APIs using Express.js and TypeScript, integrating Prisma ORM and MySQL database.</span>
               </div>
               <div class="flex items-start gap-2.5">
-                <span class="text-indigo-400 mt-1 font-mono text-xs">▸</span>
-                <span><strong>Testing (QA Highlight):</strong> จัดทำ automated System Testing และ End-to-End (E2E) scripts โดยใช้ <strong>Playwright</strong> เพื่อการันตี User Flow ที่ถูกต้องและลดปัญหาข้อผิดพลาดของระบบ</span>
+                <span class="text-indigo-400 mt-1 text-xs">▸</span>
+                <span><strong>Testing (QA Highlight):</strong> Implemented automated System Testing and End-to-End (E2E) scripts using <strong>Playwright</strong> to ensure software reliability and bug-free user journeys.</span>
               </div>
               <div class="flex items-start gap-2.5">
-                <span class="text-indigo-400 mt-1 font-mono text-xs">▸</span>
-                <span><strong>Design & Tools:</strong> ออกแบบ UI/UX ด้วย Figma และใช้ Insomnia ในการทดสอบ API Endpoints</span>
+                <span class="text-indigo-400 mt-1 text-xs">▸</span>
+                <span><strong>Tools & Design:</strong> Utilized Figma for UI/UX wireframing and Insomnia for comprehensive API endpoint testing.</span>
               </div>
             </div>
 
@@ -576,29 +575,29 @@
 
         <!-- Project 2: ClickNext Collaboration -->
         <article data-category="fullstack" class="project-item interactive-card p-6 sm:p-8 rounded-3xl bg-slate-900/70 border border-slate-800 hover:border-sky-500/50 transition-all group">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3 font-mono">
             <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/30">
               Collaborated with ClickNext Bangkok
             </span>
-            <span class="text-xs font-mono text-slate-400">Nov 2024 – Mar 2025</span>
+            <span class="text-xs text-slate-400">Nov 2024 – Mar 2025</span>
           </div>
 
           <div class="space-y-3">
-            <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-sky-300 transition-colors">
+            <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-sky-300 transition-colors font-mono">
               Work Request System
             </h3>
-            <p class="text-slate-300 text-sm leading-relaxed font-thai">
-              ระบบจัดการคำร้องขอการทำงานภายในองค์กร (Internal Work Request Management System) เพื่อเพิ่มประสิทธิภาพในการมอบหมายงานและติดตามสถานะความคืบหน้าของงานแบบเรียลไทม์
+            <p class="text-slate-300 text-sm leading-relaxed font-mono">
+              An enterprise internal work request management system built to streamline departmental task assignments and progress tracking in real time.
             </p>
 
-            <div class="space-y-2 pt-2 text-sm text-slate-300 font-thai">
+            <div class="space-y-2 pt-2 text-xs sm:text-sm text-slate-300 font-mono">
               <div class="flex items-start gap-2.5">
-                <span class="text-sky-400 mt-1 font-mono text-xs">▸</span>
-                <span>สร้างสถาปัตยกรรมระบบเว็บแอปพลิเคชันที่มีความปลอดภัยและเสถียรภาพสูงด้วย <strong>Laravel Framework (PHP)</strong></span>
+                <span class="text-sky-400 mt-1 text-xs">▸</span>
+                <span>Architected a robust, modular web application using <strong>Laravel Framework (PHP)</strong> and MySQL.</span>
               </div>
               <div class="flex items-start gap-2.5">
-                <span class="text-sky-400 mt-1 font-mono text-xs">▸</span>
-                <span>ทำงานร่วมกับทีมงาน (Cluster 3) ในการ Implement ฟีเจอร์หลัก และตรวจสอบความถูกต้องของระบบก่อนนำไปใช้งานจริง</span>
+                <span class="text-sky-400 mt-1 text-xs">▸</span>
+                <span>Collaborated with team (Cluster 3) to implement core features, role permissions, and ensure system reliability.</span>
               </div>
             </div>
 
@@ -607,61 +606,61 @@
               <span class="px-2.5 py-1 rounded-md bg-slate-950 text-xs font-mono text-slate-300 border border-slate-800">PHP</span>
               <span class="px-2.5 py-1 rounded-md bg-slate-950 text-xs font-mono text-slate-300 border border-slate-800">Laravel Framework</span>
               <span class="px-2.5 py-1 rounded-md bg-slate-950 text-xs font-mono text-slate-300 border border-slate-800">MySQL</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-950 text-xs font-mono text-slate-300 border border-slate-800">Git Team Workflow</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-950 text-xs font-mono text-slate-300 border border-slate-800">Git Workflow</span>
             </div>
           </div>
         </article>
 
         <!-- Academic Projects Grid (Unity Horror & Java App) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono">
 
           <!-- Scary Escape -->
           <article data-category="game" class="project-item interactive-card p-6 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-emerald-500/50 transition-all group">
             <div class="flex items-center justify-between gap-2 mb-3">
-              <span class="px-2.5 py-0.5 rounded-md text-xs font-mono bg-slate-800 text-slate-300">
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800 text-slate-300">
                 Academic Project
               </span>
-              <span class="text-xs font-mono text-slate-400">2023</span>
+              <span class="text-xs text-slate-400">2023</span>
             </div>
             <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors mb-2">
               Scary Escape (3D Horror Game)
             </h3>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-thai mb-3">
-              เกมแนว First-person Survival Horror บน Unity Engine เน้นระบบแก้ไขปริศนาและการสะสมไอเทมเพื่อหาทางหลบหนี
+            <p class="text-xs text-slate-400 leading-relaxed mb-3">
+              First-person survival horror game created in Unity Engine featuring puzzle-solving mechanics and item collection gameplay.
             </p>
-            <ul class="text-xs text-slate-300 space-y-1 font-thai list-disc list-inside mb-4">
-              <li>พัฒนา Game Mechanics และ Logic ด้วย Unity และ C#</li>
-              <li>ทำงานร่วมกับเพื่อนร่วมทีมในการรวบรวม Assets และปรับแต่งประสิทธิภาพเกม</li>
+            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside mb-4">
+              <li>Developed player mechanics, puzzle logic, and enemy triggers using C# and Unity.</li>
+              <li>Collaborated in a team environment to integrate 3D audio/visual assets and optimize frame rates.</li>
             </ul>
             <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800">Unity</span>
-              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800">C#</span>
-              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800">3D Game Design</span>
+              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] text-slate-300 border border-slate-800">Unity</span>
+              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] text-slate-300 border border-slate-800">C#</span>
+              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] text-slate-300 border border-slate-800">3D Game Design</span>
             </div>
           </article>
 
           <!-- Quiz Blast -->
           <article data-category="game" class="project-item interactive-card p-6 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-indigo-500/50 transition-all group">
             <div class="flex items-center justify-between gap-2 mb-3">
-              <span class="px-2.5 py-0.5 rounded-md text-xs font-mono bg-slate-800 text-slate-300">
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800 text-slate-300">
                 Academic Project
               </span>
-              <span class="text-xs font-mono text-slate-400">2023</span>
+              <span class="text-xs text-slate-400">2023</span>
             </div>
             <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors mb-2">
               Quiz Blast (Java Application)
             </h3>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-thai mb-3">
-              โปรแกรม Desktop Quiz Application สำหรับทดสอบความรู้ สร้างด้วยภาษา Java โดยประยุกต์ใช้หลักการ Object-Oriented Programming (OOP)
+            <p class="text-xs text-slate-400 leading-relaxed mb-3">
+              Desktop quiz application built using Java, implementing core Object-Oriented Programming (OOP) design patterns.
             </p>
-            <ul class="text-xs text-slate-300 space-y-1 font-thai list-disc list-inside mb-4">
-              <li>ฟังก์ชันเลือกหมวดหมู่คำถาม คำนวณคะแนน และประเมินผลผู้ใช้งานแบบโต้ตอบ</li>
-              <li>โครงสร้างโค้ดแบบ OOP จัดการ State และ Error Handling ได้อย่างรัดกุม</li>
+            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside mb-4">
+              <li>Engineered category selection, automated score computation, and responsive assessment dialogs.</li>
+              <li>Structured modular classes for state handling, question bank management, and exception safety.</li>
             </ul>
             <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800">Java</span>
-              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800">OOP Concepts</span>
-              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800">Desktop GUI</span>
+              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] text-slate-300 border border-slate-800">Java</span>
+              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] text-slate-300 border border-slate-800">OOP Architecture</span>
+              <span class="px-2 py-0.5 rounded bg-slate-950 text-[11px] text-slate-300 border border-slate-800">Desktop GUI</span>
             </div>
           </article>
 
@@ -670,7 +669,7 @@
       </div>
     </section>
 
-    <!-- INTERACTIVE DEVELOPER CLI TERMINAL WIDGET (Signature Interactive Feature) -->
+    <!-- INTERACTIVE DEVELOPER CLI TERMINAL WIDGET -->
     <section id="terminal-section" class="scroll-mt-24 space-y-4">
       <div class="flex items-center justify-between">
         <div class="space-y-1">
@@ -743,11 +742,11 @@
           <span>EDUCATION</span>
         </div>
         <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Education & Coursework
+          Academic Background & Coursework
         </h2>
       </div>
 
-      <div class="relative pl-6 border-l-2 border-slate-800 space-y-10">
+      <div class="relative pl-6 border-l-2 border-slate-800 space-y-10 font-mono">
         
         <!-- University -->
         <div class="relative">
@@ -758,22 +757,22 @@
               <h3 class="text-lg sm:text-xl font-bold text-white">
                 Bachelor of Engineering in Software Engineering
               </h3>
-              <span class="text-xs font-mono text-indigo-300 bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/30">
+              <span class="text-xs text-indigo-300 bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/30">
                 Jul 2023 – Present
               </span>
             </div>
             
             <p class="text-slate-300 text-sm">
-              Faculty of Informatics, Burapha University (มหาวิทยาลัยบูรพา)
+              Faculty of Informatics, Burapha University
             </p>
 
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-mono text-sm font-semibold">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm font-semibold">
               <i class="fa-solid fa-award"></i>
-              <span>GPA: 3.61 (Accumulated)</span>
+              <span>Accumulated GPA: 3.61</span>
             </div>
 
             <div class="pt-2">
-              <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2 font-mono">Relevant Coursework:</h4>
+              <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Relevant Coursework:</h4>
               <div class="flex flex-wrap gap-2">
                 <span class="px-2.5 py-1 rounded-md bg-slate-950 text-xs text-slate-300 border border-slate-800">Software Testing & Quality Assurance</span>
                 <span class="px-2.5 py-1 rounded-md bg-slate-950 text-xs text-slate-300 border border-slate-800">Mobile Application Development</span>
@@ -794,12 +793,12 @@
               <h3 class="text-lg font-bold text-white">
                 High School Diploma (Science-Mathematics Program)
               </h3>
-              <span class="text-xs font-mono text-slate-400">2019 – 2022</span>
+              <span class="text-xs text-slate-400">2019 – 2022</span>
             </div>
             <p class="text-slate-300 text-sm">
-              Bansuanjananusorn School (โรงเรียนบ้านสวน (จั่นอนุสรณ์))
+              Bansuanjananusorn School
             </p>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-slate-800 text-slate-300 font-mono text-xs border border-slate-700">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs border border-slate-700">
               <span>GPA: 3.87</span>
             </div>
           </div>
@@ -809,17 +808,17 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="scroll-mt-24 space-y-8">
+    <section id="contact" class="scroll-mt-24 space-y-8 font-mono">
       <div class="space-y-2 text-center max-w-xl mx-auto">
-        <div class="inline-flex items-center gap-2 text-indigo-400 text-sm font-semibold tracking-wider uppercase font-mono">
+        <div class="inline-flex items-center gap-2 text-indigo-400 text-sm font-semibold tracking-wider uppercase">
           <i class="fa-solid fa-paper-plane"></i>
           <span>GET IN TOUCH</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-          ติดต่อ & ร่วมงานกัน
+          Let's Connect & Collaborate
         </h2>
-        <p class="text-slate-400 text-sm font-thai">
-          สนใจพูดคุยเกี่ยวกับการฝึกงาน (Internship) ตำแหน่ง Software QA, Business Analyst หรือ Full-Stack Developer สามารถติดต่อได้โดยตรงครับ
+        <p class="text-slate-400 text-xs sm:text-sm">
+          Actively seeking an internship opportunity in Software Testing (QA), Business Analysis (BA), or Full-Stack Development. Feel free to reach out directly!
         </p>
       </div>
 
@@ -833,15 +832,15 @@
               <i class="fa-solid fa-envelope"></i>
             </div>
             <div>
-              <span class="text-xs text-slate-400 block font-medium font-mono">Email</span>
-              <a href="mailto:supasit.mee@gmail.com" class="text-sm font-semibold text-white group-hover:text-indigo-300 transition-colors break-all font-mono">
+              <span class="text-xs text-slate-400 block font-medium">Email</span>
+              <a href="mailto:supasit.mee@gmail.com" class="text-sm font-semibold text-white group-hover:text-indigo-300 transition-colors break-all">
                 supasit.mee@gmail.com
               </a>
             </div>
           </div>
           <button onclick="copyToClipboard('supasit.mee@gmail.com', this)" class="mt-4 w-full py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 text-xs font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center gap-1.5">
             <i class="fa-regular fa-copy"></i>
-            <span>คัดลอกอีเมล</span>
+            <span>Copy Email</span>
           </button>
         </div>
 
@@ -852,15 +851,15 @@
               <i class="fa-solid fa-phone"></i>
             </div>
             <div>
-              <span class="text-xs text-slate-400 block font-medium font-mono">Tel</span>
-              <a href="tel:+66837392007" class="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors font-mono">
+              <span class="text-xs text-slate-400 block font-medium">Phone</span>
+              <a href="tel:+66837392007" class="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors">
                 (+66) 83-739-2007
               </a>
             </div>
           </div>
           <button onclick="copyToClipboard('+66837392007', this)" class="mt-4 w-full py-2 rounded-lg bg-slate-800 hover:bg-emerald-600 text-xs font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center gap-1.5">
             <i class="fa-regular fa-copy"></i>
-            <span>คัดลอกเบอร์โทร</span>
+            <span>Copy Phone</span>
           </button>
         </div>
 
@@ -871,12 +870,12 @@
               <i class="fa-brands fa-linkedin-in"></i>
             </div>
             <div>
-              <span class="text-xs text-slate-400 block font-medium font-mono">LinkedIn</span>
-              <span class="text-sm font-semibold text-white font-mono">supasit-meedecha</span>
+              <span class="text-xs text-slate-400 block font-medium">LinkedIn</span>
+              <span class="text-sm font-semibold text-white">supasit-meedecha</span>
             </div>
           </div>
           <a href="https://linkedin.com/in/supasit-meedecha" target="_blank" rel="noreferrer" class="mt-4 w-full py-2 rounded-lg bg-slate-800 hover:bg-sky-600 text-xs font-medium text-slate-300 hover:text-white transition-all text-center flex items-center justify-center gap-1.5">
-            <span>ไปที่โปรไฟล์</span>
+            <span>View Profile</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
           </a>
         </div>
@@ -888,12 +887,12 @@
               <i class="fa-brands fa-github"></i>
             </div>
             <div>
-              <span class="text-xs text-slate-400 block font-medium font-mono">GitHub</span>
-              <span class="text-sm font-semibold text-white font-mono">EzekielMorales</span>
+              <span class="text-xs text-slate-400 block font-medium">GitHub</span>
+              <span class="text-sm font-semibold text-white">EzekielMorales</span>
             </div>
           </div>
           <a href="https://github.com/EzekielMorales" target="_blank" rel="noreferrer" class="mt-4 w-full py-2 rounded-lg bg-slate-800 hover:bg-purple-600 text-xs font-medium text-slate-300 hover:text-white transition-all text-center flex items-center justify-center gap-1.5">
-            <span>ดู GitHub Repo</span>
+            <span>View Repos</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
           </a>
         </div>
@@ -902,18 +901,18 @@
 
       <!-- CV Download Box -->
       <div class="p-8 rounded-3xl bg-gradient-to-r from-indigo-950/60 via-slate-900 to-sky-950/60 border border-indigo-500/30 text-center space-y-4 shadow-xl">
-        <h3 class="text-xl sm:text-2xl font-bold text-white">ต้องการเอกสารเรซูเม่ฉบับเต็ม?</h3>
-        <p class="text-slate-300 text-sm max-w-xl mx-auto font-thai">
-          สามารถดาวน์โหลดไฟล์ Supasit_CV.pdf ฉบับสมบูรณ์ได้ทันที หรือเปิดอ่านผ่านเว็บเบราว์เซอร์
+        <h3 class="text-xl sm:text-2xl font-bold text-white">Looking for the full resume document?</h3>
+        <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto">
+          Download the complete Supasit_CV.pdf directly or view it in full screen via your browser.
         </p>
         <div class="pt-2 flex flex-wrap justify-center gap-3">
-          <a href="assets/Supasit_CV.pdf" target="_blank" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-lg shadow-indigo-600/30 transition-all hover:scale-105 inline-flex items-center gap-2">
+          <a href="assets/Supasit_CV.pdf" target="_blank" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-lg shadow-indigo-600/30 transition-all hover:scale-105 inline-flex items-center gap-2 text-sm">
             <i class="fa-solid fa-file-pdf"></i>
-            <span>เปิดดูไฟล์ CV (PDF)</span>
+            <span>View Resume (PDF)</span>
           </a>
-          <a href="assets/Supasit_CV.pdf" download="Supasit_CV.pdf" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 font-medium transition-all hover:scale-105 inline-flex items-center gap-2">
+          <a href="assets/Supasit_CV.pdf" download="Supasit_CV.pdf" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 font-medium transition-all hover:scale-105 inline-flex items-center gap-2 text-sm">
             <i class="fa-solid fa-download"></i>
-            <span>ดาวน์โหลดเก็บไว้</span>
+            <span>Download PDF</span>
           </a>
         </div>
       </div>
@@ -922,8 +921,8 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-800/80 bg-slate-950/90 py-8 text-center text-xs text-slate-500 relative z-10">
-    <div class="max-w-6xl mx-auto px-4 space-y-2 font-mono">
+  <footer class="border-t border-slate-800/80 bg-slate-950/90 py-8 text-center text-xs text-slate-500 relative z-10 font-mono">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
       <p>© 2026 Supasit Meedecha. Built with JetBrains Mono, Tailwind CSS & JavaScript.</p>
       <p class="text-slate-600">Free, fast, and secure deployment on GitHub Pages <i class="fa-solid fa-rocket text-indigo-400 ml-1"></i></p>
     </div>
@@ -934,24 +933,24 @@
     <div class="w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
       
       <!-- Modal Header -->
-      <div class="px-5 py-3.5 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+      <div class="px-5 py-3.5 bg-slate-950 border-b border-slate-800 flex items-center justify-between font-mono">
         <div class="flex items-center gap-2.5">
           <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm">
             <i class="fa-solid fa-flask"></i>
           </div>
           <div>
-            <h3 class="font-bold text-white text-sm font-mono">Playwright QA Test Simulator</h3>
-            <p class="text-[11px] text-slate-400 font-mono">Cultura Community Platform (NECTEC Collaboration)</p>
+            <h3 class="font-bold text-white text-sm">Playwright QA Test Simulator</h3>
+            <p class="text-[11px] text-slate-400">Cultura Community Platform (NECTEC Collaboration)</p>
           </div>
         </div>
 
         <div class="flex items-center gap-2">
           <!-- Audio Toggle -->
-          <button id="sound-toggle-btn" title="เปิด/ปิดเสียงเอฟเฟกต์" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors text-sm">
+          <button id="sound-toggle-btn" title="Toggle sound effects" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors text-sm">
             <i class="fa-solid fa-volume-high"></i>
           </button>
           <!-- Close Button -->
-          <button id="close-qa-modal" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors text-sm">
+          <button id="close-qa-modal" title="Close" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors text-sm">
             <i class="fa-solid fa-xmark text-base"></i>
           </button>
         </div>
@@ -968,24 +967,24 @@
       </div>
 
       <!-- Modal Footer -->
-      <div class="px-5 py-3 bg-slate-900 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
-        <div class="text-[11px] text-slate-400 font-mono flex items-center gap-2">
+      <div class="px-5 py-3 bg-slate-900 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 font-mono">
+        <div class="text-[11px] text-slate-400 flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
           <span>Simulation Engine Active</span>
         </div>
-        <button id="run-tests-btn" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-mono font-semibold transition-all flex items-center gap-2">
+        <button id="run-tests-btn" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition-all flex items-center gap-2">
           <i class="fa-solid fa-rotate-right"></i>
-          <span>รันการทดสอบใหม่อีกครั้ง</span>
+          <span>Re-run Test Suite</span>
         </button>
       </div>
 
     </div>
   </div>
 
-  <!-- Toast Notification for Copy -->
+  <!-- Toast Notification for Copy & Actions -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white px-4 py-3 rounded-xl border border-indigo-500/50 shadow-2xl flex items-center gap-3 text-sm font-mono">
     <i class="fa-solid fa-circle-check text-emerald-400"></i>
-    <span id="toast-message">คัดลอกเรียบร้อยแล้ว!</span>
+    <span id="toast-message">Copied to clipboard!</span>
   </div>
 
   <!-- Custom Scripts -->

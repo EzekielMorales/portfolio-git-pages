@@ -2,13 +2,8 @@
 
 /* Font setup */
 body {
-  font-family: 'JetBrains Mono', 'Prompt', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'JetBrains Mono', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   letter-spacing: -0.02em;
-}
-
-/* Thai font optimization */
-.font-thai {
-  font-family: 'Prompt', 'JetBrains Mono', sans-serif;
 }
 
 /* Custom smooth scrollbar */
