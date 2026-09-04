@@ -530,7 +530,7 @@ function initTerminal() {
     },
     about: () => `
       <div class="text-slate-300 text-xs leading-relaxed font-thai">
-        สวัสดีครับ! ผม ศุภสิทธิ์ มีเดชา (Supasit Meedecha) นิสิตวิศวกรรมซอฟต์แวร์ ม.บูรพา GPA 3.61<br/>
+        สวัสดีครับ! ผม สุภษิต มีเดชา (Supasit Meedecha) นิสิตวิศวกรรมซอฟต์แวร์ ม.บูรพา GPA 3.61<br/>
         กำลังมองหาที่ฝึกงานสาย Software QA / BA / Full-Stack พร้อมลุยงานเต็มที่ครับ!
       </div>
     `,
